@@ -1,4 +1,6 @@
+const path = require('path');
 const express = require('express');
+const morgan = require('morgan');
 const app = express();
 
 const forceSSL = function() {
@@ -10,7 +12,8 @@ const forceSSL = function() {
   }
 }
 
-app.use(forceSSL());
+app.use(morgan('combined'));
+//app.use(forceSSL());
 app.use(express.static(__dirname + 'dist'));
 
 app.get('/*', function(req, res) { res.sendFile(path.join(__dirname + '/dist/index.html')) });
