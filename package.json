@@ -2,6 +2,10 @@
   "name": "ngx-bootstrap-helloworld",
   "version": "0.0.0",
   "license": "MIT",
+  "engine": {
+    "node": "v8.9.4",
+    "npm": "v5.6.0"
+  },
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
